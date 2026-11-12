@@ -1,0 +1,6 @@
+# Keep secrets and local files out of the image.
+**/.env
+*.log
+.git
+http_static
+**/__pycache__
