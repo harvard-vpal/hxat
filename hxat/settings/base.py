@@ -241,11 +241,6 @@ LOGGING = {
             "handlers": ["default", "console"],
             "propagate": False,
         },
-        "image_store.backends": {
-            "level": _DEFAULT_LOG_LEVEL,
-            "handlers": ["default", "console"],
-            "propagate": False,
-        },
     },
 }
 
@@ -318,10 +313,6 @@ ANNOTATION_TRANSCRIPT_LINK_DEFAULT = os.environ.get(
 ANNOTATION_HTTPS_ONLY = os.environ.get("HTTPS_ONLY", "False").lower() == "true"
 ANNOTATION_LOGGER_URL = os.environ.get("ANNOTATION_LOGGER_URL", "")
 ACCESSIBILITY = os.environ.get("ACCESSIBILITY", "True").lower() == "true"
-IMAGE_STORE_BACKEND = os.environ.get("IMAGE_STORE_BACKEND", "")
-IMAGE_STORE_BACKEND_CONFIG = json.loads(
-    os.environ.get("IMAGE_STORE_BACKEND_CONFIG", "{}")
-)
 
 SESSION_COOKIE_SAMESITE = "None"
 SESSION_COOKIE_SECURE = True

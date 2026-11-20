@@ -138,7 +138,6 @@ def handlePopAdd(request, addForm, field):
         "course": get_course_id(request),
         "org": settings.ORGANIZATION,
         "is_instructor": request.LTI["is_staff"],
-        "image_store_enabled": bool(settings.IMAGE_STORE_BACKEND),
     }
     return render(request, "target_object_database/source_form.html", pageContext)
 
